@@ -7,6 +7,9 @@
 
 ## 1. Introduction
 
+We choose LeNet as an example, use tensorflow and keras to carry out parameter adjustment experiments, and compare their test accuracy. For different methods, we delete and adjust the revolution, dropout and pooling etc. After the results are obtained, the validation accuracy is compared and analyzed in the form of line chart and table.
+
+Next, we will describe the data sources and characteristics of this experiment. Then the six methods and their respective parameter adjustment methods are introduced in turn. After that, the chart of comparison between methods is displayed and analyzed. Finally, the experiment is summarized.
 
 
 
@@ -45,10 +48,15 @@ Keras-2 changes the dropout value of keras-1 from 0.2 to 0.3. It can be seen fro
 
 In the training of neural network, we often encounter the problem of over fitting, which is shown in the following aspects: the loss function of the model in the training data is smaller, and the prediction accuracy is higher; but in the test data, the loss function is larger, and the prediction accuracy is lower. Dropout can effectively alleviate the occurrence of over fitting and achieve the effect of regularization to a certain extent.
 
-### iv. Keras-1 VS Keras-2
+When we use dropout in the training, it means that some of the weights and offsets are not used in the calculation and update of an iteration, but it doesn't mean that we don't use the weights and offsets anymore. That is, dropout doesn't play any role in the prediction process, it's only useful when you're training, and it's particularly useful when the training set is small to prevent overfitting. The reason for the difference is that it has an effect on the training, but not on the prediction.
+
+### iv. Keras-1 VS Keras-3
 
 ![k1-k3](https://github.com/WangLei-M105120312/project2/blob/main/image/k1-k3.png)  
+
 It is obvious from the figure that in this method, deleting a convolution layer has little effect on the validation accuracy, especially in the previous generations of training, the two almost coincide on the line chart.
+
+The input layer has four units, and the output layer has five units. As a fully connected layer, each unit in the input layer is connected to all the units in the next layer, and each unit in the output layer is also connected to all the units in the previous layer. Changing the number of layers has an effect on the prediction process and the result. This is the intuitive nature of the full connection layer.
 
 ### v. Test Accuracy of three Tensorflow solution
 
@@ -66,3 +74,5 @@ The three methods of Keras are compared. As shown in the table2, Keras-3 has the
 | Test Accuracy | 0.9892 | 0.9886 | 0.9913 |
 
 ## 5. Summary
+
+Through this experiment and learning, we have mastered tensorflow and keras methods, and have a certain understanding of their respective ways of adjusting parameters, and also deepen our understanding of the field of machine learning. Of course, in the process of data training and testing, we also encountered many problems, such as the installation of tensorflow, the problem of Python version, various errors in the process of code modification, etc. There is also the problem itself, such as how to adjust to improve the test accuracy. Through continuous attempts and improvements, we found the above several good ways, including some schemes with poor effect are compared with better schemes. Of course, our method is not the best, and we can think of a better one in the future. In the future, we will continue to learn machine learning and hope to apply it to our scientific research and projects.
