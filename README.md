@@ -65,6 +65,7 @@ The three methods of tensorflow are compared. As shown in the table1, tensorflow
 | :-----------: | :---------: | :---------: | :---------: | 
 | Test Accuracy |    0.989    |     0.990   |    0.988    |
 
+Tensorflow3 < Tensorflow1 < Tensorflow2
 
 ### vi. Test Accuracy of three Keras solution
 
@@ -72,6 +73,8 @@ The three methods of Keras are compared. As shown in the table2, Keras-3 has the
 |      Name     | Keras1 | Keras2 | Keras3 |
 | :-----------: | :----: | :----: | :----: | 
 | Test Accuracy | 0.9892 | 0.9886 | 0.9913 |
+
+Keras2 < Keras1 < Keras3
 
 ## 5. Summary
 
