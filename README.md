@@ -27,6 +27,19 @@ After importing data, we used ‘dataset=mnist.load_data()’ to read datasets, 
 
 After importing data, we used ‘dataset=mnist.load_data()’ to read datasets, first, we set ‘filters’, ‘kernel_size’, ‘strides’, and ‘input_shape’, and in keras1 and keras3, we used ’ Dropout(0.2)’ to dropout 30 percent neure kernel, and in keras2, we dropout 30 percent. Then we set pooling kernel. After that, we use three convolution layers in keras1 and keras2, but two convolution layers in keras3. After we ran the training data to train the model, we measured the loss and accuracy of the validation set and save the model after training. Finally we got ten group of data in each Keras. 
 
+Output shape of each layer：
+### keras1
+---------------------------------
+![k1](https://github.com/WangLei-M105120312/project2/blob/main/image/k1.png)  
+
+### keras2
+---------------------------------
+![k2](https://github.com/WangLei-M105120312/project2/blob/main/image/k2.png)  
+
+### keras3
+---------------------------------
+![k3](https://github.com/WangLei-M105120312/project2/blob/main/image/k3.png) 
+
 ## 4. Accuracy comparison and analysis
 
 ### i. Tensorflow-1 VS Tensorflow-2
